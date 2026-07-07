@@ -1,1 +1,1 @@
-pahalal.vercel.app
+https://pahalal.vercel.app/
