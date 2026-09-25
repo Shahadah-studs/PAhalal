@@ -1,101 +1,133 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Prince Albert Halal Kitchen</title>
-        
-        <link rel="icon" type="image/png" href="/Vroom.png?v=1">   
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Authentic Kabuli Pulao & Arabian Mandi in Prince Albert, SK. 100% Halal family-owned weekend kitchen. Open Saturdays and Sundays!">
-        
-    </head>
-    <body> 
-<style>
-    body{background-image:linear-gradient(to left, yellow, rgb(255, 221, 0),orange);
-    border:9px double rgb(173, 115, 16);
-       
-    }
-    h3{text-align: center; font-family:"Palatino";
-        background-color:rgb(217, 126, 52);
-color:Yellow;    }
-     h1{font-family:georgia;}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Prince Albert Halal Kitchen</title>
+    <link rel="icon" type="image/png" href="/Vroom.png?v=1">   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Authentic Kabuli Pulao & Arabian Mandi in Prince Albert, SK. 100% Halal family-owned weekend kitchen. Open Saturdays and Sundays!">
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Marcellus&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background: linear-gradient(135deg, #fffcf4, #fdf3d7); color: #3e2723; font-family: 'Plus Jakarta Sans', sans-serif; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
+        .menu-container { width: 100%; max-width: 800px; background: #ffffff; padding: 40px; border-radius: 24px; box-shadow: 0 10px 40px rgba(139,94,26,0.08); border: 2px solid #f5e6c4; }
+        header { text-align: center; margin-bottom: 40px; border-bottom: 2px dashed #e0a96d; padding-bottom: 30px; }
+        h1 { font-family: 'Marcellus', serif; font-size: 2.5rem; color: #8d4004; margin-bottom: 10px; }
+        h1 span { color: #d47a2a; }
+        .hero-title { font-family: 'Marcellus', serif; font-size: 1.4rem; color: #a05c1b; margin-bottom: 20px; }
+        .intro-box { background-color: #fff9eb; border: 1px solid #fbe5b7; border-radius: 16px; padding: 25px; font-size: 0.9rem; line-height: 1.8; color: #5d4037; text-align: center; margin-bottom: 40px; }
+        .section-title { font-family: 'Marcellus', serif; font-size: 1.8rem; color: #8d4004; border-bottom: 2px solid #f5e6c4; padding-bottom: 10px; margin: 40px 0 20px; }
+        .dish-card { background: #fffdf9; border: 1px solid #f7edd3; border-radius: 16px; padding: 25px; margin-bottom: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.02); }
+        .dish-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 10px; }
+        .dish-name { font-family: 'Marcellus', serif; font-size: 1.4rem; color: #a05c1b; }
+        .dish-desc { font-size: 0.95rem; color: #5d4037; line-height: 1.6; margin-bottom: 20px; }
+        .btn-grid { display: flex; gap: 15px; margin-bottom: 15px; flex-wrap: wrap; }
+        .action-btn { flex: 1; min-width: 180px; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; padding: 12px 20px; border-radius: 10px; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; transition: all 0.2s ease; }
+        .btn-gallery { background-color: #fff; color: #d47a2a; border: 2px solid #d47a2a; }
+        .btn-gallery:hover { background-color: #d47a2a; color: #fff; }
+        .btn-video { background-color: #d47a2a; color: #fff; border: 2px solid #d47a2a; }
+        .btn-video:hover { background-color: #b36119; border-color: #b36119; }
+        .btn-order { background-color: #3b5998; color: #fff; border: 2px solid #3b5998; width: 100%; margin-top: 15px; font-size: 0.90rem; }
+        .btn-order:hover { background-color: #2d4373; border-color: #2d4373; }
+        .meat-tag { display: inline-block; background-color: #fbe9e7; color: #d84315; font-size: 0.8rem; font-weight: 700; padding: 4px 12px; border-radius: 6px; text-transform: uppercase; }
+        .price-list, .side-list { list-style: none; }
+        .price-item, .side-item { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px dashed #f5e6c4; font-size: 0.95rem; }
+        .price-item:last-child, .side-item:last-child { border-bottom: none; }
+        .price-name { font-weight: 600; color: #3e2723; }
+        .price-val { font-weight: 700; color: #8d4004; }
+        .note-text { font-size: 0.8rem; font-style: italic; color: #8e24aa; margin-top: 10px; font-weight: 600; }
+        .logistics-box { background-color: #f4f9f5; border: 1px solid #d1e7dd; border-radius: 16px; padding: 20px; font-size: 0.9rem; color: #145a32; line-height: 1.6; margin-top: 20px; }
+        .author-tag { text-align: right; font-size: 10px; color: #a1887f; margin-top: 40px; font-family: monospace; }
+    </style>
+</head>
+<body>
 
-h2{font-family:sans-serif;
-color:rgb(181, 135, 27);
-}
-li{ font-family:georgia;}    
-span{color:rgb(143, 122, 6);}
- #welcome-to-my-webster{border: 5px double rgb(159, 163, 49);}   
-.afghan-i{color:rgb(130, 90, 24);}
-.meats{text-align:left;}
-  .B1oxdg4mer_{text-align:right;
-      border:2px ;
-  font-family:georgia; 
-    font-size:8px; 
-  }  
-a{
-    color:rgb(0, 43, 255);
-}
-#Menu8{
-    color:rgb(110, 77, 12);
+    <div class="menu-container">
+        <header>
+            <h1><span>Prince Albert</span> Halal Kitchen</h1>
+            <div class="hero-title">Authentic Kabuli Pulao & Arabian Mandi</div>
+        </header>
 
-    font-family:"Monospace";
-}
+        <div class="intro-box">
+            Welcome to Prince Albert Halal Kitchen – your local destination for delicious Middle Eastern and Afghan rice dishes. Freshly made right here in Prince Albert.<br><br>
+            <strong>📍 Pick up & limited delivery | 📅 Weekly specials | 💬 Order via DM | ✨ 100% Halal | 🏠 Family-Owned</strong>
+        </div>
 
-</style>
-<h1><span>-Prince Albert</span> <span>Halal Kitchen's-</span>
-</h1>
-<h2><br>Authentic Kabuli Pulao & Arabian Mandi</h2>
-<h3 id="welcome-to-my-webster">-Welcome to Prince Albert Halal Kitchen- your local destination's delicious Middle eastern and Afghan Rice Dishes <br>Freshly made in Prince Albert.
-<br>
-<br>Pick up & limited delivery available|
-<br>Weekly specials|Order via DM|100% Halal|
-<br>Family-Owned
-</h3>
-<h1 id="Menu8">Menu:</h1>
-<h2>Arabian Mandi:</h2>
-<h3> Mandi is a yemeni dish that has authentic spices and includes cashews and other nuts.<br>You can ask for nutless Mandi if you are nut allergen :)</h3>
+        <div class="section-title">Main Dishes</div>
 
-        <h2>Click the link underneath to see pictures:👇</h2><h1><a href="https://ibb.co/4ZHtb357">Mandi Photos<p></p></a></h1>
+        <div class="dish-card">
+            <div class="dish-header">
+                <div class="dish-name">Arabian Mandi</div>
+                <div class="meat-tag">Lamb</div>
+            </div>
+            <p class="dish-desc">Mandi is a traditional Yemeni dish infused with an authentic blend of spices, topped with golden cashews and savory nuts. <br><span style="color:#c62828; font-weight:600;">*Nut-free option available upon request if you have allergies!</span></p>
+            <div class="btn-grid">
+                <a href="https://ibb.co" class="action-btn btn-gallery" target="_blank">📸 View Mandi Photos</a>
+                <a href="https://image2url.com" class="action-btn btn-video" target="_blank">🎥 Watch Video</a>
+            </div>
+        </div>
 
-        <h3 class="meats"><br> Types of meat:<br> Lamb</h3>
+        <div class="dish-card">
+            <div class="dish-header">
+                <div class="dish-name">Kabuli Pulao</div>
+                <div class="meat-tag">Lamb</div>
+            </div>
+            <p class="dish-desc">An iconic Afghan masterpiece featuring premium rice cooked with signature authentic spices, sweet carrots, and raisins. Naturally nut-allergy friendly!</p>
+            <div class="btn-grid">
+                <a href="https://ibb.co" class="action-btn btn-gallery" target="_blank">📸 View Pulao Photos</a>
+                <a href="https://image2url.com" class="action-btn btn-video" target="_blank">🎥 Watch Video</a>
+            </div>
+        </div>
 
-<h2 class="afghan-i"><br>Kabuli Pulao:</h2>
-<h3>Kabuli Pulao is a afghani dish that has authentic spices that is also nut allergen freindly :)</h3>
-<h2>Click the link underneath to see pictures:👇</h2><h1><a href="https://ibb.co/5x2KGsTC">Kabuli Pulao Photos<p></p></a></h1>
-<h3 class="meats"><br> Types of meat:<br> Lamb</h3> <h2>Or Watch This video</h2>
-<h3> <a href="https://www.image2url.com/r2/default/videos/1786315045757-3ceb7326-06cc-41b7-985a-2b3dc9575a1e.mp4">Mandi & Kabuli pulao </a></h3>  
-    <br><br><br><h2>Pricings for Mandi & Kabuli Pulao</h2>
-<ul>
- 
-    <li>Single:$25</li>
-    <br>
-    <li>Double:$50</li>
-    <br>
-    <li>Triple:$75</li>    
-    <br>
-    <li>Family-Platter 4 persons:$90</li>
-    <br>
-    <li>Family-Platter 8 persons:$180</li>
-    <h3>Note:Cash will be accepted only.</h3>    
-        
-        
-    </ul>
-<h2 class="sides">Sides</h2>
-<h3 class="5ides">These sides make the food better. Both of them are Nut-free</h3>
-<ul>
-    <li>Raita Sauce:$1<br>A sauce with an incredible way to grow your appetite made with herbs like garlic </li>
-    <br>
-<li> Mandhi Sauce:$1<br>A sauce also made with herbs, but preferd to go with Mandi, but you can try with Kabuli Pulao</li>
-    
-</ul>
-<h2>Pickup & Delivery Fee's</h2>
-<h3>Delivery Fee $3</h3> 
-<h3>Pickup Fee $0</h3> 
-<h3><br>To confirm your order message us on the <a href="https://www.facebook.com/profile.php?id=61578219946307">-Facebook Marketplace-</a>. Also give us your house address for delivery's on sundays. <br>Note: delivery's on sundays only<br> Delivery's only in Prince Albert</h3>
+        <div class="section-title">Pricings</div>
+        <div class="dish-card">
+            <ul class="price-list">
+                <li class="price-item"><span class="price-name">Single Portion</span><span class="price-val">$25</span></li>
+                <li class="price-item"><span class="price-name">Double Portion</span><span class="price-val">$50</span></li>
+                <li class="price-item"><span class="price-name">Triple Portion</span><span class="price-val">$75</span></li>
+                <li class="price-item"><span class="price-name">Family Platter (4 Persons)</span><span class="price-val">$90</span></li>
+                <li class="price-item"><span class="price-name">Family Platter (8 Persons)</span><span class="price-val">$180</span></li>
+            </ul>
+            <p class="note-text">⚠️ Note: Cash only accepted upon fulfillment.</p>
+        </div>
 
-<h6 class="B1oxdg4mer_" ><br>Author: Shahadah_studios</h6>
+        <div class="section-title">Sides (Nut-Free)</div>
+        <div class="dish-card">
+            <ul class="side-list">
+                <li class="side-item">
+                    <div>
+                        <span class="price-name">Raita Sauce</span>
+                        <p style="font-size:0.8rem; color:#6d4c41; margin-top:4px;">A refreshing herb and garlic sauce engineered to elevate your appetite.</p>
+                    </div>
+                    <span class="price-val">$1</span>
+                </li>
+                <li class="side-item">
+                    <div>
+                        <span class="price-name">Mandi Sauce</span>
+                        <p style="font-size:0.8rem; color:#6d4c41; margin-top:4px;">A savory herbal sauce designed for Mandi, but equally amazing with Kabuli Pulao.</p>
+                    </div>
+                    <span class="price-val">$1</span>
+                </li>
+            </ul>
+        </div>
 
+        <div class="section-title">Fulfillment & Delivery</div>
+        <div class="dish-card">
+            <ul class="price-list" style="margin-bottom:15px;">
+                <li class="price-item"><span class="price-name">Pickup Fee</span><span class="price-val" style="color:#2e7d32;">$0 (Free)</span></li>
+                <li class="price-item"><span class="price-name">Delivery Fee</span><span class="price-val">$3</span></li>
+            </ul>
+            <div class="logistics-box">
+                <strong>🚗 Delivery Logistics:</strong> Available on <strong>Sundays only</strong>, exclusively within the city limits of <strong>Prince Albert</strong>. Please provide your complete street address when booking.
+            </div>
+            <a href="https://facebook.com" class="action-btn btn-order" target="_blank">✉️ Message via Facebook Marketplace to Confirm Order</a>
+        </div>
 
-    </body>
+        <div class="author-tag">Author: Shahadah_studios</div>
+    </div>
+
+</body>
 </html>
+
